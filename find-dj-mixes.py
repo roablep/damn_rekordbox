@@ -25,7 +25,7 @@ def move_dj_mixes(source_folder, destination_folder, size_threshold=100 * 1024 *
                 # Check if the file size is above the threshold and the name matches the patterns
                 if file_size > size_threshold and dj_mix_patterns.search(file):
                     destination_path = os.path.join(destination_folder, file)
-                    shutil.move(source_path, destination_path)
+                    shutil.copy2(source_path, destination_path)
 
                     # If delete flag is on, check if the move was successful before deleting
                     if delete_after_move and os.path.exists(source_path) and os.path.exists(destination_path) and os.path.getsize(destination_path) == file_size:
