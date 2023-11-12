@@ -28,7 +28,7 @@ def move_dj_mixes(source_folder, destination_folder, size_threshold=100 * 1024 *
                     shutil.move(source_path, destination_path)
 
                     # If delete flag is on, check if the move was successful before deleting
-                    if delete_after_move and os.path.exists(destination_path) and os.path.getsize(destination_path) == file_size:
+                    if delete_after_move and os.path.exists(source_path) and os.path.exists(destination_path) and os.path.getsize(destination_path) == file_size:
                         os.remove(source_path)
                     moved_mixes.append(destination_path)
 
