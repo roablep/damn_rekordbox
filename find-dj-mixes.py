@@ -40,3 +40,7 @@ def move_dj_mixes(source_folder, destination_folder, size_threshold=100 * 1024 *
 # moved_files = move_dj_mixes(source_folder, destination_folder, delete_after_move=True)
 # for file in moved_files:
 #     print(f"Moved: {file}")
+
+source_folder = '/Volumes/USB/65200'
+destination_folder = '/Volumes/USB/mix-quar'
+moved_files = move_dj_mixes(source_folder, destination_folder, delete_after_move=True)
